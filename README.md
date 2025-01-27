@@ -10,7 +10,7 @@ Inspired by https://github.com/darklinkpower/PlayniteExtensionsCollection
 2. Open the .pnext file
 
 ## Usage
-See [instructions](documentation/Playnite.docx?raw=1) 
+Download instructions here : [Playnite.docx](documentation/Playnite.docx?raw=1) 
 
 
 ## Features
