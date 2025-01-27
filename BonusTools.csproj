@@ -234,7 +234,6 @@
     <Compile Include="..\..\Common\SteamCommon\Common.cs">
       <Link>Shared\SteamCommon\Common.cs</Link>
     </Compile>
-   
     <Compile Include="JP\ImportFromFiles\CustomSpreadsheet.cs" />
     <Compile Include="JP\Models\GameJson.cs" />
     <Compile Include="JP\Popularity\IGDB.cs" />
@@ -255,12 +254,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="documentation\ImportingSwitchNSP.docx" />
+    <None Include="documentation\Playnite.docx" />
     <None Include="extension.yaml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="JP\Files\Ryujinx Games List Compatibility.xlsx" />
     <None Include="JP\Files\yuzu-comp.xlsx" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="app.xaml">
