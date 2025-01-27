@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NewsViewer.Models
+namespace BonusTools.Models
 {
     public class NumberOfPlayersResponse
     {
