@@ -7,15 +7,13 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.IO;
-using NewsViewer.Models;
 
 namespace BonusTools.JP
 {
     internal class Steam
     {
         public static async void Update(Game game, IPlayniteAPI PlayniteApi, string steamApiLanguage, string pluginPath)
-        {
-            //var userOverwriteChoice = PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCReview_Viewer_DialogOverwriteChoiceMessage"), "Steam Reviews Viewer", MessageBoxButton.YesNo);
+        {            
             var reviewSearchTypes = new string[] { "all" }; // , "positive", "negative"
             var pluginDataPath = pluginPath;
 
@@ -84,7 +82,7 @@ namespace BonusTools.JP
                 // total_reviews - Total number of reviews matching the query parameters
                 var TotalReviewsAvailable = reviews.QuerySummary.TotalReviews;
 
-                // TODO JP : this is a hack to store the total reviews in the UserScore field!
+                // TODO JP : this is a "hack" to store the total reviews in the UserScore field!
                 if (TotalReviewsAvailable > 0)
                 {
                     gameToUpdate.UserScore = (int?)TotalReviewsAvailable;

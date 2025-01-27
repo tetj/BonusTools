@@ -20,6 +20,8 @@ namespace BonusTools.JP
 
             // TODO : we use an external program instead but I should try to import that code in the plugin directly
             string cleanName = RemoveEditions(gameToUpdate.Name);
+
+            // TODO : need to stop relying on an external program
             string output = ExecuteExternalProgram(@"C:\Users\JP\source\repos\NintendoSwitch\IGDB\bin\Debug\net8.0\IGDBexe.exe", "\"" + cleanName + "\"");
             string[] results = output.Trim().Split('|');
 
