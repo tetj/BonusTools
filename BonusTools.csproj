@@ -135,57 +135,6 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Common\FlowHttp\Constants\HttpContentTypeConstants.cs">
-      <Link>Shared\FlowHttp\Constants\HttpContentTypeConstants.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Constants\HttpContentTypes.cs">
-      <Link>Shared\FlowHttp\Constants\HttpContentTypes.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\CookiesUtilities.cs">
-      <Link>Shared\FlowHttp\CookiesUtilities.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\DownloadStateController.cs">
-      <Link>Shared\FlowHttp\DownloadStateController.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Enums\HttpRequestClientStatus.cs">
-      <Link>Shared\FlowHttp\Enums\HttpRequestClientStatus.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Events\DownloadProgressArgs.cs">
-      <Link>Shared\FlowHttp\Events\DownloadProgressArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Events\DownloadStateArgs.cs">
-      <Link>Shared\FlowHttp\Events\DownloadStateArgs.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Exceptions\MissingContentRangeHeaderException.cs">
-      <Link>Shared\FlowHttp\Exceptions\MissingContentRangeHeaderException.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\HttpClientFactory.cs">
-      <Link>Shared\FlowHttp\HttpClientFactory.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\HttpRequestFactory.cs">
-      <Link>Shared\FlowHttp\HttpRequestFactory.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpFileRequest.cs">
-      <Link>Shared\FlowHttp\HttpRequests\FlowHttpFileRequest.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpRequest.cs">
-      <Link>Shared\FlowHttp\HttpRequests\FlowHttpRequest.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpRequestBase.cs">
-      <Link>Shared\FlowHttp\HttpRequests\FlowHttpRequestBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Results\HttpContentResultT.cs">
-      <Link>Shared\FlowHttp\Results\HttpContentResultT.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Results\HttpFileDownloadResult.cs">
-      <Link>Shared\FlowHttp\Results\HttpFileDownloadResult.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\Results\HttpResultBase.cs">
-      <Link>Shared\FlowHttp\Results\HttpResultBase.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Common\FlowHttp\ValueObjects\HttpContentType.cs">
-      <Link>Shared\FlowHttp\ValueObjects\HttpContentType.cs</Link>
-    </Compile>
     <Compile Include="..\..\common\playniteutilitiescommon\PlayniteUtilities.cs">
       <Link>Shared\PlayniteUtilitiesCommon\PlayniteUtilities.cs</Link>
     </Compile>
@@ -234,7 +183,6 @@
     <Compile Include="..\..\Common\SteamCommon\Common.cs">
       <Link>Shared\SteamCommon\Common.cs</Link>
     </Compile>
-    <Compile Include="BbCodeProcessor.cs" />
     <Compile Include="JP\ImportFromFiles\CustomSpreadsheet.cs" />
     <Compile Include="JP\Models\GameJson.cs" />
     <Compile Include="JP\Popularity\IGDB.cs" />
@@ -261,6 +209,7 @@
     <None Include="JP\Files\Ryujinx Games List Compatibility.xlsx" />
     <None Include="JP\Files\yuzu-comp.xlsx" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="app.xaml">

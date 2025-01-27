@@ -1,25 +1,13 @@
-﻿using FlowHttp;
-using Playnite.SDK.Data;
+﻿using Playnite.SDK.Data;
 using Playnite.SDK.Models;
 using Playnite.SDK;
-using PluginsCommon;
 using BonusTools.Models;
-using SteamCommon;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 using System.IO;
-using Microsoft.Extensions.Logging;
 using NewsViewer.Models;
-using System.Xml.Linq;
-
-//xcopy "C:\Users\JP\_CODE\darkpower\source\Generic\BonusTools\bin\Debug\IGDB.dll" "C:\Users\JP\AppData\Roaming\Playnite\Extensions\Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd2\IGDB.dll" /y
-//xcopy "C:\Users\JP\_CODE\darkpower\source\Generic\BonusTools\bin\Debug\Newtonsoft.Json.dll" "C:\Users\JP\AppData\Roaming\Playnite\Extensions\Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd2\Newtonsoft.Json.dll" /y
-//xcopy "C:\Users\JP\_CODE\darkpower\source\Generic\BonusTools\bin\Debug\RestEase.dll" "C:\Users\JP\AppData\Roaming\Playnite\Extensions\Review_Viewer_ca24e37a-76d9-49bf-89ab-d3cba4a54bd2\RestEase.dll" /y
 
 namespace BonusTools.JP
 {
