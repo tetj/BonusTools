@@ -1,12 +1,16 @@
 # BonusTools
 
 A Playnite extension to import data from Excel files + from Steam & IGDB
+
 Inspired by https://github.com/darklinkpower/PlayniteExtensionsCollection
 
 ## Installation
 
 1. Download the latest release from the [releases page](ok)
 2. Open the .pnext file
+
+## Usage
+See [instructions](documentation/Playnite.docx) 
 
 ## Features
 
