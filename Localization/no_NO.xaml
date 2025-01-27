@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCReview_Viewer_SettingsHelpLabel">Hjelp</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemReviewViewerDescription">Review Viewer</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemUpdateDataDescription">Oppdater omtaledata for valgte spill</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogOverwriteChoiceMessage">Vil du laste ned data igjen for spill som allerede har?</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogDataUpdateProgressMessage">Oppdatering av omtaledata pågår...</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage">Dataoppdatering fullført.</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_SettingUseMatchingSteamApiLang">Bruk språk som brukes av Playnite til å søke etter omtaler hvis det er tilgjengelig på Steam</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionDescription">Last ned omtaledata når spill velges</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfMissingDescription">Last ned hvis omtaledata mangler</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfOlderThanDescription">Hvis data er eldre enn dette antallet dager:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDescriptionHeightDescription">Omtalefeltets høyde</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayHelpfulnessDataDescription">Vis data om omtalens kvalitet</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayDateDescription">Vis omtaledato</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_TotalUserReviews">Totalt antall omtaler:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_PositiveUserReviews">Positive omtaler:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_NegativeUserReviews">Negative omtaler:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_AverageUserScore">Gjennomsnittlig poengsum:</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_ReviewsTypeLabel">Omtaletype:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeAll">Alle</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypePositive">Positiv</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeNegative">Negativ</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_Review">Omtale:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewLabel">Omtale</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewsLabel">Omtaler</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPostedDateLabel">Postet: {0}</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewRecommendedLabel">Anbefalt</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewNotRecommendedLabel">Ikke anbefalt</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPlaytimeFormat">{0} timer og {1} minutter ved tidspunkt for omtale</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTotalPlaytimeFormat">{0} timer og {1} minutter total spilletid</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessHelpfulFormat">{0} personer syns denne omtalen var nyttig</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessFunnyFormat">{0} personer syns denne omtalen var morsom</sys:String>
+</ResourceDictionary>

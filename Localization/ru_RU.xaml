@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCReview_Viewer_SettingsHelpLabel">Справка</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemReviewViewerDescription">Просмотрщик обзоров</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemUpdateDataDescription">Обновить данные обзоров для выбранных игр</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogOverwriteChoiceMessage">Вы хотите снова загрузить данные для игр, в которых они уже есть?</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogDataUpdateProgressMessage">Выполняется обновление данных для обзоров...</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage">Обновление данных завершено.</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_SettingUseMatchingSteamApiLang">Использовать язык Playnite для поиска обзоров, если он доступен в Steam</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionDescription">Загрузить данные обзора для выбранной игры</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfMissingDescription">Загружать если данные обзора не найдены</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfOlderThanDescription">Если данные старше дней:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDescriptionHeightDescription">Высота описания</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayHelpfulnessDataDescription">Показывать полезность обзора</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayDateDescription">Показывать дату обзора</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_TotalUserReviews">Всего обзоров:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_PositiveUserReviews">Положительные обзоры:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_NegativeUserReviews">Отрицательные обзоры:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_AverageUserScore">Средний балл:</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_ReviewsTypeLabel">Тип обзора:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeAll">Все</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypePositive">Положительный</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeNegative">Отрицательный</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_Review">Обзор:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewLabel">Обзор</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewsLabel">Обзоры</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPostedDateLabel">Опубликовано: {0}</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewRecommendedLabel">Рекомендуемые</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewNotRecommendedLabel">Не рекомендуемые</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPlaytimeFormat">{0} часов {1} минут на момент обзора</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTotalPlaytimeFormat">{0} часов {1} минут общего времени сыграно</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessHelpfulFormat">{0} человек посчитали обзор полезным</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessFunnyFormat">{0} человек посчитали обзор забавным</sys:String>
+</ResourceDictionary>

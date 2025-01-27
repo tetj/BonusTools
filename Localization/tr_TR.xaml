@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCReview_Viewer_SettingsHelpLabel">Yardım</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemReviewViewerDescription">İnceleme Görüntüleyicisi</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemUpdateDataDescription">Seçilen oyunların inceleme verilerini güncelle</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogOverwriteChoiceMessage">Zaten mevcut olan oyunlara ait verileri tekrar indirmek istiyor musunuz?</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogDataUpdateProgressMessage">İnceleme verileri güncellemesi devam ediyor...</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage">Veri yenileme tamamlandı.</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_SettingUseMatchingSteamApiLang">Steam'de mevcutsa incelemeleri aramak için Playnite tarafından kullanılan dili kullanın</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionDescription">Oyun seçiminde veri indirmeyi inceleyin</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfMissingDescription">İnceleme verileri eksikse indirin</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfOlderThanDescription">Veriler belirtilen günden daha eskiyse:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDescriptionHeightDescription">Açıklama yüksekliği</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayHelpfulnessDataDescription">İnceleme yararlılığını göster</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayDateDescription">İnceleme tarihini göster</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_TotalUserReviews">Toplam inceleme:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_PositiveUserReviews">Olumlu inceleme:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_NegativeUserReviews">Olumsuz inceleme:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_AverageUserScore">Puan ortalaması:</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_ReviewsTypeLabel">İnceleme türü:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeAll">Hepsi</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypePositive">Olumlu</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeNegative">Olumsuz</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_Review">İnceleme:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewLabel">İnceleme</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewsLabel">İncelemeler</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPostedDateLabel">Gönderildi: {0}</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewRecommendedLabel">Önerilen</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewNotRecommendedLabel">Tavsiye Edilmiyor</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPlaytimeFormat">İnceleme gönderildiğinde: {0}.{1} saat</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTotalPlaytimeFormat">Toplam oynama süresi: {0}.{1} saat</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessHelpfulFormat">{0} kişi bu incelemeyi yararlı buldu</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessFunnyFormat">{0} kişi bu incelemeyi komik buldu</sys:String>
+</ResourceDictionary>
