@@ -281,6 +281,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="icons\features\couch.png" />
+    <Content Include="icons\features\online.png" />
     <Content Include="icons\removed.png" />
     <Content Include="icons\source_icons\DVD.png" />
     <Content Include="icons\source_icons\extra.png" />
