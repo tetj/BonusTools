@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="BonusTools.BonusSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BonusTools"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="800">
+    <StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">SensCritique</Label>
+            <Separator Margin="0,0,0,10" />
+            <TextBlock Text="Minimum game name similarity (min 60% recommended):" />
+            <TextBox Text="{Binding Settings.Min}" MinWidth="100" HorizontalAlignment="Left"/>
+            <!--Slider Value="{Binding Settings.Int1, UpdateSourceTrigger=PropertyChanged}" Width="150" Minimum="60" Maximum="100" HorizontalAlignment="Left" TickFrequency="5"  Margin="0,0,0,10" IsSnapToTickEnabled="True"/-->
+            <TextBlock Text="Sleep time between requests (to avoid http error 429 Too Many Requests) :" />
+            <!--Slider Value="{Binding Settings.Int1, UpdateSourceTrigger=PropertyChanged}" Width="150" Minimum="300" Maximum="1000" HorizontalAlignment="Left" TickFrequency="5"  Margin="0,0,0,10" IsSnapToTickEnabled="True"/-->
+            <TextBox Text="{Binding Settings.Sleep}" MinWidth="100" HorizontalAlignment="Left"/>
+            <CheckBox IsChecked="{Binding Settings.ReleaseYearMustMatch}" Content="Release Year must match"  Margin="0,0,0,10"/>
+            <CheckBox IsChecked="{Binding Settings.PlatformMustMatch}" Content="Platform must match (e.g : PlayStation 5)"  Margin="0,0,0,10"/>
+            <CheckBox IsChecked="{Binding Settings.UpdatePlayCountFromSensCritique}" Content="Populate Playnite.PlayCount with SensCritique.ReviewCount"  Margin="0,0,0,10"/>
+            <CheckBox IsChecked="{Binding Settings.UpdateUserScoreFromSensCritique}" Content="Populate Playnite.UserScore with SensCritique.CommunityScore"  Margin="0,0,0,10"/>
+            <CheckBox IsChecked="{Binding Settings.AddLinkToSensCritique}" Content="Add a link to SensCritique"  Margin="0,0,0,10"/>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Steam</Label>
+            <Separator Margin="0,0,0,5" />
+            <CheckBox IsChecked="{Binding Settings.UpdatePlayCountFromSteam}" Content="Populate Playnite.PlayCount with Steam.ReviewCount"  Margin="0,0,0,10"/>
+            <CheckBox IsChecked="{Binding Settings.UpdateCommunityScore}" Content="Populate Community Score"  Margin="0,0,0,10"/>
+            <!--TextBlock Text="Steam API key:" />
+            <TextBox Text="{Binding Settings.SteamApiKey}" MinWidth="600" HorizontalAlignment="Left"/-->            
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">IGDB</Label>
+            <Separator Margin="0,0,0,5" />
+            <TextBlock Text="CLIENT_ID:" />
+            <TextBox Text="{Binding Settings.ClientID}" MinWidth="600" HorizontalAlignment="Left"/>
+            <TextBlock Text="CLIENT_SECRET :" />
+            <TextBox Text="{Binding Settings.ClientSecret}" MinWidth="600" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Custom Spreadsheet</Label>
+            <Separator Margin="0,0,0,5" />
+            <TextBlock Text="File Path:" />
+            <TextBox Text="{Binding Settings.Custom}" MinWidth="600" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">PlayStation</Label>
+            <Separator Margin="0,0,0,5" />
+            <TextBlock Text="File Path Master List (.xlsx):" />
+            <TextBox Text="{Binding Settings.Master}" MinWidth="600" HorizontalAlignment="Left"/>
+            <TextBlock Text="File Path Transaction Details (.xlsx):" />
+            <TextBox Text="{Binding Settings.Transac}" MinWidth="600" HorizontalAlignment="Left"/>            
+        </StackPanel>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold">Nintendo</Label>
+            <Separator Margin="0,0,0,5" />
+            <TextBlock Text="NX-Activity-Log File Path (.json):" />
+            <TextBox Text="{Binding Settings.Nintendo}" MinWidth="600" HorizontalAlignment="Left"/>
+            <TextBlock Text="ROM Backup Directory:" />
+            <TextBox Text="{Binding Settings.NintendoRomBackup}" MinWidth="600" HorizontalAlignment="Left"/>
+            <TextBlock Text="Import PlayCount (not recommended) :" />
+            <CheckBox IsChecked="{Binding Option2}" />
+            <TextBlock Text="Yuzu File Path (.xlsx):" />
+            <TextBox Text="{Binding Settings.Yuzu}" MinWidth="600" HorizontalAlignment="Left"/>
+            <TextBlock Text="Ryujinx File Path (.xlsx):" />
+            <TextBox Text="{Binding Settings.Ryu}" MinWidth="600" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

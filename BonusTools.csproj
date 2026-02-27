@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E63CAD2F-E238-4F0B-B294-90810D6134B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BonusTools</RootNamespace>
+    <AssemblyName>BonusTools</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CodeKicker.BBCode, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CodeKicker.BBCode.5.0.0.0\lib\net35\CodeKicker.BBCode.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\HtmlRenderer.Core.1.5.0.5\lib\net45\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WPF, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\HtmlRenderer.WPF.1.5.0.6\lib\net45\HtmlRenderer.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="IGDB, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\IGDB.5.1.0\lib\netstandard2.0\IGDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Http, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Http.6.0.0\lib\net461\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.6.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Options.6.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Playnite.SDK, Version=6.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PlayniteSDK.6.9.0\lib\net462\Playnite.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestEase, Version=1.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RestEase.1.5.7\lib\net452\RestEase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.9.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.10, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.6.0.10\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Common\FlowHttp\Constants\HttpContentTypeConstants.cs">
+      <Link>Shared\FlowHttp\Constants\HttpContentTypeConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Constants\HttpContentTypes.cs">
+      <Link>Shared\FlowHttp\Constants\HttpContentTypes.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\CookiesUtilities.cs">
+      <Link>Shared\FlowHttp\CookiesUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\DownloadStateController.cs">
+      <Link>Shared\FlowHttp\DownloadStateController.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Enums\HttpRequestClientStatus.cs">
+      <Link>Shared\FlowHttp\Enums\HttpRequestClientStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Events\DownloadProgressArgs.cs">
+      <Link>Shared\FlowHttp\Events\DownloadProgressArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Events\DownloadStateArgs.cs">
+      <Link>Shared\FlowHttp\Events\DownloadStateArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Exceptions\MissingContentRangeHeaderException.cs">
+      <Link>Shared\FlowHttp\Exceptions\MissingContentRangeHeaderException.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\HttpClientFactory.cs">
+      <Link>Shared\FlowHttp\HttpClientFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\HttpRequestFactory.cs">
+      <Link>Shared\FlowHttp\HttpRequestFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpFileRequest.cs">
+      <Link>Shared\FlowHttp\HttpRequests\FlowHttpFileRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpRequest.cs">
+      <Link>Shared\FlowHttp\HttpRequests\FlowHttpRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\HttpRequests\FlowHttpRequestBase.cs">
+      <Link>Shared\FlowHttp\HttpRequests\FlowHttpRequestBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Results\HttpContentResultT.cs">
+      <Link>Shared\FlowHttp\Results\HttpContentResultT.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Results\HttpFileDownloadResult.cs">
+      <Link>Shared\FlowHttp\Results\HttpFileDownloadResult.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\Results\HttpResultBase.cs">
+      <Link>Shared\FlowHttp\Results\HttpResultBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\FlowHttp\ValueObjects\HttpContentType.cs">
+      <Link>Shared\FlowHttp\ValueObjects\HttpContentType.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\playniteutilitiescommon\PlayniteUtilities.cs">
+      <Link>Shared\PlayniteUtilitiesCommon\PlayniteUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\converters\NumericConverters.cs">
+      <Link>Shared\PluginsCommon\Converters\NumericConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\Encryption.cs">
+      <Link>Shared\PluginsCommon\Encryption.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PluginsCommon\Extensions\CharExtensions.cs">
+      <Link>Shared\PluginsCommon\Extensions\CharExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\extensions\EnumExtensions.cs">
+      <Link>Shared\PluginsCommon\Extensions\EnumExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\PluginsCommon\Extensions\LongExtensions.cs">
+      <Link>Shared\PluginsCommon\Extensions\LongExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\extensions\StringExtensions.cs">
+      <Link>Shared\PluginsCommon\Extensions\StringExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\FileSystem.cs">
+      <Link>Shared\PluginsCommon\FileSystem.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\GlobalCommands.cs">
+      <Link>Shared\PluginsCommon\GlobalCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\native\Kernel32.cs">
+      <Link>Shared\PluginsCommon\Native\Kernel32.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\native\Ntdll.cs">
+      <Link>Shared\PluginsCommon\Native\Ntdll.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\native\Processthreadsapi.cs">
+      <Link>Shared\PluginsCommon\Native\Processthreadsapi.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\native\WinBase.cs">
+      <Link>Shared\PluginsCommon\Native\WinBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\Paths.cs">
+      <Link>Shared\PluginsCommon\Paths.cs</Link>
+    </Compile>
+    <Compile Include="..\..\common\pluginscommon\ProcessStarter.cs">
+      <Link>Shared\PluginsCommon\ProcessStarter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Common\SteamCommon\Common.cs">
+      <Link>Shared\SteamCommon\Common.cs</Link>
+    </Compile>
+    <Compile Include="IGDBexe\GameJson.cs" />
+    <Compile Include="IGDBexe\GameParser.cs" />
+    <Compile Include="IGDBexe\IGDBClientHelperV2.cs" />
+    <Compile Include="IGDBexe\IGDBEndpointExtensions.cs" />
+    <Compile Include="IGDBexe\PopularityPrimitive.cs" />
+    <Compile Include="IGDBexe\PopularitySource.cs" />
+    <Compile Include="IGDBexe\PopularityType.cs" />
+    <Compile Include="IGDBexe\IGDBClientHelper.cs" />
+    <Compile Include="IGDBexe\TestData.cs" />
+    <Compile Include="JP\ImportFromFiles\CustomSpreadsheet.cs" />
+    <Compile Include="JP\Popularity\IGDB.cs" />
+    <Compile Include="JP\ImportFromFiles\Nintendo.cs" />
+    <Compile Include="JP\ImportFromFiles\PsPrices.cs" />
+    <Compile Include="JP\Popularity\Steam.cs" />
+    <Compile Include="JP\ImportFromFiles\Ryujinx.cs" />
+    <Compile Include="JP\GraphQLServiceV2.cs" />
+    <Compile Include="JP\SensCritiqueV2.cs" />
+    <Compile Include="JP\Shared\Levenshtein.cs" />
+    <Compile Include="JP\ImportFromFiles\Yuzu.cs" />
+    <Compile Include="Models\NumberOfPlayersResponse.cs" />
+    <Compile Include="Models\ReviewsResponse.cs" />
+    <Compile Include="JP\ImportFromFiles\PsMasterList.cs" />
+    <Compile Include="JP\Popularity\Popularity.cs" />
+    <Compile Include="JP\Models\PsGame.cs" />
+    <Compile Include="BonusTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BonusSettings.cs" />
+    <Compile Include="BonusSettingsView.xaml.cs">
+      <DependentUpon>BonusSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SteamSearch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="documentation\ImportingSwitchNSP.md" />
+    <None Include="documentation\Playnite.docx" />
+    <None Include="extension.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="JP\Files\Ryujinx Games List Compatibility.xlsx" />
+    <None Include="JP\Files\yuzu-comp.xlsx" />
+    <None Include="packages.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="app.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Localization\en_US.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BonusSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="documentation\1.png" />
+    <Content Include="documentation\2.png" />
+    <Content Include="documentation\3.png" />
+    <Content Include="documentation\4.png" />
+    <Content Include="documentation\5.png" />
+    <Content Include="icons\features\couch.png" />
+    <Content Include="icons\features\crossplay.png" />
+    <Content Include="icons\features\online.png" />
+    <Content Include="icons\removed.png" />
+    <Content Include="icons\source_icons\DVD.png" />
+    <Content Include="icons\source_icons\extra.png" />
+    <Content Include="icons\source_icons\NES Mini.png" />
+    <Content Include="icons\source_icons\Nintendo Switch Online.png" />
+    <Content Include="icons\source_icons\Nintendo Switch.png" />
+    <Content Include="icons\source_icons\P%24.png" />
+    <Content Include="icons\source_icons\PC Game Pass.png" />
+    <Content Include="icons\source_icons\PS Extra.png" />
+    <Content Include="icons\source_icons\PS Monthly.png" />
+    <Content Include="icons\source_icons\PS3.png" />
+    <Content Include="icons\source_icons\PS4.png" />
+    <Content Include="icons\source_icons\PS5.png" />
+    <Content Include="icons\source_icons\SEGA Mini.png" />
+    <Content Include="icons\source_icons\Xbox 360.png" />
+    <Content Include="icons\top_panel\Amazon.png" />
+    <Content Include="icons\top_panel\Battle.net.png" />
+    <Content Include="icons\top_panel\Epic.png" />
+    <Content Include="icons\top_panel\GOG.png" />
+    <Content Include="icons\top_panel\Origin.png" />
+    <Content Include="icons\top_panel\Playstation.jpg" />
+    <Content Include="icons\top_panel\Steam.png" />
+    <Content Include="icons\top_panel\Ubisoft.png" />
+    <Content Include="icons\top_panel\Xbox.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Localization\*.xaml" "$(TargetDir)\Localization" /Y /I /E
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

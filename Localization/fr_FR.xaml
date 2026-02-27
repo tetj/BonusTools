@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="LOCReview_Viewer_SettingsHelpLabel">Aide</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemReviewViewerDescription">Visionneuse d'évaluation</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_MenuItemUpdateDataDescription">Mettre à jour les données d'évaluation des jeux sélectionnés</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogOverwriteChoiceMessage">Voulez-vous télécharger à nouveau les données pour les jeux qui en ont déjà ?</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogDataUpdateProgressMessage">Mise à jour en cours des données d'évaluation...</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage">Mise à jour des données terminée.</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_SettingUseMatchingSteamApiLang">Utiliser la langue utilisée par Playnite pour rechercher des évaluations si disponible sur Steam</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionDescription">Téléchargement des données d'évaluation de la sélection de jeu</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfMissingDescription">Télécharger si les données d'évaluation sont manquantes</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDownloadOnGameSelectionIfOlderThanDescription">Si les données sont plus anciennes que ce nombre de jours :</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDescriptionHeightDescription">Hauteur de la description</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayHelpfulnessDataDescription">Afficher l'utilité de l'évaluation</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_SettingDisplayDateDescription">Afficher la date de l'évaluation</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_TotalUserReviews">Total des évaluations :</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_PositiveUserReviews">Avis positifs :</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_NegativeUserReviews">Avis négatifs:</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_AverageUserScore">Score moyen :</sys:String>
+
+    <sys:String x:Key="LOCReview_Viewer_ReviewsTypeLabel">Type d'évaluations :</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeAll">Total</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypePositive">Positives</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTypeNegative">Négatives</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_Review">Évaluations :</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewLabel">Évaluation</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewsLabel">Évaluations</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPostedDateLabel">Publié le : {0}</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewRecommendedLabel">Recommandé</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewNotRecommendedLabel">Non recommandé</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewPlaytimeFormat">{0} heures {1} minutes au moment de l'évaluation</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewTotalPlaytimeFormat">{0} heures {1} minutes de temps de jeu total</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessHelpfulFormat">{0} personnes ont trouvé cette évaluation utile</sys:String>
+    <sys:String x:Key="LOCReview_Viewer_ReviewHelpfulnessFunnyFormat">{0} personnes ont trouvé cette évaluation amusante</sys:String>
+</ResourceDictionary>
