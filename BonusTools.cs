@@ -68,11 +68,20 @@ namespace BonusTools
                     },
                     new GameMenuItem
                     {
-                        Description = "Update roms based on Nintendo IDs",
+                        Description = "Update roms path based on Nintendo IDs (Step 1)",
                         MenuSection = $"{_menuSection}",
                         Icon = "BonusToolsUpdateIcon",
                         Action = a => {
                             new Nintendo(settings.Settings).FixNintendoRomPaths(PlayniteApi);
+                        }
+                    },
+                    new GameMenuItem
+                    {
+                        Description = "Update install path based on roms path (Step 2)",
+                        MenuSection = $"{_menuSection}",
+                        Icon = "BonusToolsUpdateIcon",
+                        Action = a => {
+                            new Nintendo(settings.Settings).FixNintendoInstallDirectories(PlayniteApi);
                         }
                     },
                     new GameMenuItem
