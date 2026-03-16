@@ -1,15 +1,10 @@
 ﻿using ExcelDataReader;
 using Playnite.SDK;
-using Playnite.SDK.Models;
 using PlayniteUtilitiesCommon;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace BonusTools.ImportFromFiles
 {
