@@ -7,77 +7,58 @@ namespace BonusTools
 {
     public class BonusSettings : ObservableObject
     {
-        [DontSerialize]
         private string min = "70";
         public string Min { get => min; set => SetValue(ref min, value); }
 
-        [DontSerialize]
         private string sleep = "400";
         public string Sleep { get => sleep; set => SetValue(ref sleep, value); }
 
-        [DontSerialize]
         private string steamApiKey = "BECEC3BB7A813B2277C7BE593EBA79BD";
         public string SteamApiKey { get => steamApiKey; set => SetValue(ref steamApiKey, value); }
 
-        [DontSerialize]
         private string clientID = "j8jsa14md3xge0nkdn9d0sjh56svqp";
         public string ClientID { get => clientID; set => SetValue(ref clientID, value); }
 
-        [DontSerialize]
         private string clientSecret = "4j6o7t555ix3j2bm1jyscwyyvybc10";
         public string ClientSecret { get => clientSecret; set => SetValue(ref clientSecret, value); }
 
-        [DontSerialize]
         private string custom = "c:\\myCustomSpreadsheet.xlsx";
         public string Custom { get => custom; set => SetValue(ref custom, value); }
 
-        [DontSerialize]
         private string master = "c:\\Playstation Plus Master List.xlsx";
         public string Master { get => master; set => SetValue(ref master, value); }
 
-        [DontSerialize]
         private string transac = "c:\\TransactionDetails.xlsx";
         public string Transac { get => transac; set => SetValue(ref transac, value); }
 
-        [DontSerialize]
         private string nintendoRomBackup = "";
         public string NintendoRomBackup { get => nintendoRomBackup; set => SetValue(ref nintendoRomBackup, value); }
 
-        [DontSerialize]
         private bool updatePlayCountFromNintendo = false;
         public bool UpdatePlayCountFromNintendo { get => updatePlayCountFromNintendo; set => SetValue(ref updatePlayCountFromNintendo, value); }
 
-        [DontSerialize]
         private bool releaseYearMustMatch = true;
         public bool ReleaseYearMustMatch { get => releaseYearMustMatch; set => SetValue(ref releaseYearMustMatch, value); }
 
-        [DontSerialize]
         private bool platformMustMatch = true;
         public bool PlatformMustMatch { get => platformMustMatch; set => SetValue(ref platformMustMatch, value); }
 
-        [DontSerialize]
         private bool addLinkToSensCritique = true;
         public bool AddLinkToSensCritique { get => addLinkToSensCritique; set => SetValue(ref addLinkToSensCritique, value); }
 
-        [DontSerialize]
         private bool updatePlayCountFromSteam = true;
         public bool UpdatePlayCountFromSteam { get => updatePlayCountFromSteam; set => SetValue(ref updatePlayCountFromSteam, value); }
 
-        [DontSerialize]
         private bool updatePlayCountFromSensCritique = true;
         public bool UpdatePlayCountFromSensCritique { get => updatePlayCountFromSensCritique; set => SetValue(ref updatePlayCountFromSensCritique, value); }
 
-        [DontSerialize]
         private bool updateUserScoreFromSensCritique = true;
         public bool UpdateUserScoreFromSensCritique { get => updateUserScoreFromSensCritique; set => SetValue(ref updateUserScoreFromSensCritique, value); }
 
-        [DontSerialize]
         private bool updateCommunityScore = true;
         public bool UpdateCommunityScore { get => updateCommunityScore; set => SetValue(ref updateCommunityScore, value); }
 
-
-        [DontSerialize]
-        private double int1 { get; set; } = 300;
+        private double int1 = 300;
         public double Int1
         {
             get => int1;
@@ -111,18 +92,24 @@ namespace BonusTools
             // Injecting your plugin instance is required for Save/Load method because Playnite saves data to a location based on what plugin requested the operation.
             this.plugin = plugin;
 
-            // Load saved settings.
-            var savedSettings = plugin.LoadPluginSettings<BonusSettings>();
-
-            // LoadPluginSettings returns null if not saved data is available.
-            if (savedSettings != null)
+            // The old EndEdit bug saved the ViewModel (wrapped as {"Settings":{...}}) instead of
+            // Settings directly. Try loading in that old wrapper format first so the saved values
+            // are not lost. Once the user saves again, EndEdit writes the correct flat format and
+            // this branch is no longer taken.
+            var wrapper = plugin.LoadPluginSettings<LegacySettingsWrapper>();
+            if (wrapper?.Settings != null)
             {
-                Settings = savedSettings;
+                Settings = wrapper.Settings;
             }
             else
             {
-                Settings = new BonusSettings();
+                Settings = plugin.LoadPluginSettings<BonusSettings>() ?? new BonusSettings();
             }
+        }
+
+        private class LegacySettingsWrapper
+        {
+            public BonusSettings Settings { get; set; }
         }
 
         public void BeginEdit()
@@ -141,7 +128,7 @@ namespace BonusTools
         // To save settings just call SavePluginSettings when user confirms changes.
         public void EndEdit()
         {
-            plugin.SavePluginSettings(this);
+            plugin.SavePluginSettings(Settings);
         }
 
         public bool VerifySettings(out List<string> errors)
