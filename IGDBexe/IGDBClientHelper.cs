@@ -1,4 +1,5 @@
-﻿using IGDB;
+﻿#nullable enable
+using IGDB;
 using IGDB.Models;
 using System.Linq;
 using System.Threading.Tasks;

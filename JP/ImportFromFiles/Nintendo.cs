@@ -120,6 +120,27 @@ namespace BonusTools
             }
         }
 
+        /// <summary>
+        /// Repairs broken ROM file paths for Nintendo Switch games in the Playnite library.
+        /// </summary>
+        /// <remarks>
+        /// For each Switch game whose ROM path no longer points to an existing file, this method
+        /// extracts the game's title ID from the ROM name and searches for a file whose name
+        /// contains that ID.  The search is performed in two passes:
+        /// <list type="number">
+        ///   <item><description>
+        ///     The game's current <c>InstallDirectory</c> is searched first (non-recursive).
+        ///   </description></item>
+        ///   <item><description>
+        ///     If nothing is found there, the fallback ROM backup directory configured in
+        ///     extension settings is searched recursively across all sub-directories.
+        ///     If the backup directory has not been configured the user is prompted once.
+        ///   </description></item>
+        /// </list>
+        /// When a match is found the ROM's path is updated in the Playnite database, allowing
+        /// Playnite to locate the file again without creating a duplicate library entry.
+        /// </remarks>
+        /// <param name="PlayniteApi">The Playnite API instance used to access the game database and show dialogs.</param>
         public void FixNintendoRomPaths(IPlayniteAPI PlayniteApi)
         {
             int fixedCount = 0;
@@ -222,6 +243,62 @@ namespace BonusTools
             }
 
             Debug.WriteLine($"\nResults - Fixed: {fixedCount}, Not found: {notFoundCount}, No ID: {noIdCount}, Skipped: {skippedCount}");
+            PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage"), "SensCritiqueV2");
+        }
+
+        /// <summary>
+        /// Repairs incorrect <c>InstallDirectory</c> values for Nintendo Switch games in the Playnite library.
+        /// </summary>
+        /// <remarks>
+        /// For each Switch game whose first ROM points to an existing file, this method derives the
+        /// correct install directory from that ROM's location using <see cref="Path.GetDirectoryName"/>
+        /// and writes it back to <c>game.InstallDirectory</c> when it differs from the current value.
+        /// Games with no ROMs, or whose first ROM path does not point to an existing file, are skipped.
+        /// </remarks>
+        /// <param name="PlayniteApi">The Playnite API instance used to access the game database and show dialogs.</param>
+        public void FixNintendoInstallDirectories(IPlayniteAPI PlayniteApi)
+        {
+            int fixedCount = 0;
+            int skippedCount = 0;
+
+            var switchGames = PlayniteApi.Database.Games.Where(g =>
+                g.Platforms != null &&
+                g.Platforms.Any() &&
+                g.Platforms.FirstOrDefault()?.Name == "Nintendo Switch").ToList();
+
+            Console.WriteLine($"Found {switchGames.Count} Nintendo Switch games");
+
+            foreach (var game in switchGames)
+            {
+                if (game.Roms == null || !game.Roms.Any())
+                {
+                    skippedCount++;
+                    continue;
+                }
+
+                var rom = game.Roms.First();
+
+                if (!File.Exists(rom.Path))
+                {
+                    skippedCount++;
+                    continue;
+                }
+
+                string correctDirectory = Path.GetDirectoryName(rom.Path);
+
+                if (string.Equals(game.InstallDirectory, correctDirectory, StringComparison.OrdinalIgnoreCase))
+                {
+                    continue;
+                }
+
+                PlayniteApi.Database.BufferedUpdate();
+                game.InstallDirectory = correctDirectory;
+                PlayniteApi.Database.Games.Update(game);
+                Console.WriteLine($"Fixed InstallDirectory for '{game.Name}': {correctDirectory}");
+                fixedCount++;
+            }
+
+            Debug.WriteLine($"\nResults - Fixed: {fixedCount}, Skipped: {skippedCount}");
             PlayniteApi.Dialogs.ShowMessage(ResourceProvider.GetString("LOCReview_Viewer_DialogResultsDataRefreshFinishedMessage"), "SensCritiqueV2");
         }
 
