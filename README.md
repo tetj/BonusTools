@@ -12,7 +12,7 @@ Inspired by https://github.com/darklinkpower/PlayniteExtensionsCollection
 2. Open the .pnext file
 
 ## Usage
-Download instructions here : [Playnite.docx](documentation/Playnite.docx?raw=1) 
+Download instructions here : [[Playnite.docx]](https://github.com/tetj/BonusTools/raw/refs/heads/main/documentation/Playnite.docx)
 
 ## Features
 - Import numbers of reviews on Steam (IGDB*300 as fallback), **overwrites PlayCount**
