@@ -26,7 +26,9 @@ Download instructions here : [Playnite.docx](documentation/Playnite.docx?raw=1)
 - Import Nintendo Switch playtime data (requires Atmosphere custom firmware), **overwrites Time Played**
 - Import Yu-zu / Ryu-jinx compatibility data as **Categories**
 - Fix broken Nintendo Switch ROM paths by searching for a file matching the game's ID
-  Example let's say you changed the file from : SuperHydorah[**010099F00B374800**]v0.NSP to Super Hydorah [**010099F00B374800**][v262144].nsp
+  For example, let's say you changed the file from : SuperHydorah[**010099F00B374800**]v0.NSP to Super Hydorah [**010099F00B374800**][v262144].nsp
   This feature will search for a file matching the game's ID (010099F00B374800) and update the path in Playnite to match the new file name.
   This way, Playnite will find the file instead of marking the game as missing.
-  And if you update your Emulated Folder, the game won't be detected as a new game, which would cause duplicates in your library.
+  And if you update your Emulated Folder, the game won't be detected as a new game, so you don't get duplicates in your library.
+  Files can be moved safely to another directory, as long as you keep the title ID in the file name.
+- Fix install path based on roms path
