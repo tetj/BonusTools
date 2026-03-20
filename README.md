@@ -24,7 +24,7 @@ Download instructions here : [[Playnite.docx]](https://github.com/tetj/BonusTool
 ## Features for Nintendo Switch :
 - Import games ROMs (.nsp files), see [ImportingSwitchNSP](documentation/ImportingSwitchNSP.md)
 - Import Nintendo Switch playtime data (requires Atmosphere custom firmware), **overwrites Time Played**
-- Import Yu-zu / Ryu-jinx compatibility data as **Categories**
+- Import [Yuzu](https://docs.google.com/spreadsheets/d/1mwmGv8Sd0BV12o0qjX37ixy_2Gao2V-vxCmuHLiN5iQ/edit?gid=1850502174#gid=1850502174) / [Ryujinx](https://gist.githubusercontent.com/ezhevita/b41ed3bf64d0cc01269cab036e884f3d/raw/e458185a5e8473f7d7e6cbf7b699036ce65d5701/Ryujinx%2520Games%2520List%2520Compatibility.csv) compatibility data as **Categories**
 - Fix install path based on roms path
 - Fix broken Nintendo Switch ROM paths by searching for a file matching the game's ID :
 
